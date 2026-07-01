@@ -56,7 +56,7 @@ function Weather() {
   };
 
   useEffect(() => {
-    search("Accra");
+    search("Ghana");
   }, []);
 
   const search = async (city) => {
