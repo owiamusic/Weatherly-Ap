@@ -5,7 +5,7 @@ It allows users to search for any city and view real-time weather information su
 
 ## 🚀 Live Demo
 
-👉
+👉 https://weatherly-app-kappa.vercel.app/
 
 ---
 
