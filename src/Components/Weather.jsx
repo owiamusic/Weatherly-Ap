@@ -85,6 +85,7 @@ function Weather() {
         temperature: Math.floor(data.main.temp),
         location: data.name,
         icon: icon,
+        description: data.weather[0].description,
       });
     } catch (error) {
       setweatherData({
@@ -93,6 +94,7 @@ function Weather() {
         temperature: "",
         location: "",
         icon: sunIcon,
+        description: "",
       });
 
       Alert.alert("Error in fetching Weather Data");
@@ -131,6 +133,9 @@ function Weather() {
                   {weatherData.temperature}°c
                 </Text>
                 <Text style={styles.location}>{weatherData.location}</Text>
+                <Text style={styles.description}>
+                  {weatherData.description}
+                </Text>
                 <View style={styles.weatherData}>
                   <View style={styles.col}>
                     <Image
@@ -269,6 +274,13 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 22,
     marginTop: 5,
+    fontWeight: "bold",
+  },
+  description: {
+    color: "#fff",
+    fontSize: 15,
+    marginTop: 5,
+    fontStyle: "italic",
   },
   temperature: {
     color: "#fff",
